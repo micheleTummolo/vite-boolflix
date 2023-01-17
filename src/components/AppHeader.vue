@@ -28,35 +28,33 @@ export default {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link text-light" href="#">Serie TV</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">
+                                Film
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a class="nav-link text-light" href="#">Originali</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Aggiunti di recente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">La mia lista</a>
                         </li>
                     </ul>
                     <!-- Search bar -->
-                    <form class="d-flex" role="search">
+                    <div class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                            v-model="store.search">
-                    </form>
-                    <button class="btn btn-outline-success" type="submit" @click="$emit('search')">Search</button>
+                            v-model="store.search" @keyup.enter="$emit('search')">
+                        <button class="btn btn-outline-success" type="submit" @click="$emit('search')">Search</button>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -70,6 +68,10 @@ header {
 
         .boolflix_color {
             color: rgb(228, 19, 26);
+
+            &:hover {
+                color: rgb(181, 16, 21);
+            }
         }
     }
 }
