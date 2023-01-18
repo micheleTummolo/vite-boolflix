@@ -17,6 +17,16 @@ export default {
     }
   },
 
+  beforeMount() {
+    axios.get(store.filmUrl).then((response) => {
+      store.films = response.data
+    })
+
+    axios.get(store.tvUrl).then((response) => {
+      store.tv = response.data
+    })
+  },
+
   methods: {
     dataRequest() {
       store.filmUrl = 'https://api.themoviedb.org/3/search/movie?api_key=2603405e11aa1415589f75dcb722d1e6&language=it-IT&query=' + store.search
@@ -32,6 +42,8 @@ export default {
       })
 
       store.search = ''
+
+      store.click = true
     }
   }
 }

@@ -30,7 +30,8 @@ export default {
 <template lang="">
     <div class="row ms-3">
         <div class="col-12 p-0">
-            <h1>Film</h1>
+            <h1 v-if="store.click">Film trovati: {{store.films.results.length}}</h1>
+            <h1 v-else>Film di tendenza</h1>
         </div>
     </div>
     <div class="overflow-auto mx-3 film_container">

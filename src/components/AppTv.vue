@@ -29,7 +29,8 @@ export default {
 <template lang="">
     <div class="row ms-3 mt-4">
         <div class="col-12 p-0">
-            <h1>Serier TV</h1>
+            <h1 v-if="store.click">Serier TV trovate: {{store.tv.results.length}}</h1>
+            <h1 v-else>Serier TV di tendenza</h1>
         </div>
     </div>
     <div class="overflow-auto mx-3 film_container">
