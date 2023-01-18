@@ -14,12 +14,13 @@ export default {
 </script>
 <template lang="">
     <div class="my_card p-3">
+        <img :src="store.imgUrl + tv.poster_path" alt="">
         <h5>Titolo:  {{tv.name}}</h5>
         <h5>Titolo Originale:  {{tv.original_name}}</h5>
         <h5>Lingua Originale: 
             <span v-if="tv.original_language == 'en'" class="fi fi-gb fis"></span>
             <span v-else :class="`fi fi-` + tv.original_language + ` fis`"></span></h5>
-        <h5>Voto: {{tv.vote_average}} /10</h5>
+        <h5>Voto: {{tv.vote_average}} /5</h5>
     </div>
 </template>
 <style lang="scss">

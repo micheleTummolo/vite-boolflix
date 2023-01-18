@@ -15,6 +15,16 @@ export default {
 
     props: {
         tv: Array,
+    },
+
+    beforeUpdate() {
+        console.log("Voti Serie TV")
+        for (let i = 0; i < store.tv.results.length; i++) {
+            let vote = Math.round(store.tv.results[i].vote_average / 2)
+            store.tv.results[i].vote_average = vote
+            /* console.log("Serie TV " + i + ": " + vote)
+            console.log("Serie TV " + i + ": " + store.tv.results[i].vote_average) */
+        }
     }
 
 }
