@@ -28,7 +28,7 @@ export default {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active text-secondary active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">Serie TV</a>
@@ -52,7 +52,8 @@ export default {
                     <div class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             v-model="store.search" @keyup.enter="$emit('search')">
-                        <button class="btn btn-outline-success" type="submit" @click="$emit('search')">Search</button>
+                        <button class="btn btn-outline-success" type="submit" @click="$emit('search')"><i
+                                class="fa-solid fa-magnifying-glass search_icon"></i></button>
                     </div>
 
                 </div>
@@ -69,9 +70,15 @@ header {
         .boolflix_color {
             color: rgb(228, 19, 26);
 
-            &:hover {
-                color: rgb(181, 16, 21);
-            }
+
+        }
+
+        button:hover .search_icon {
+            color: white;
+        }
+
+        .search_icon {
+            color: rgb(25, 135, 84);
         }
     }
 }

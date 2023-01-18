@@ -19,7 +19,6 @@ export default {
 
   methods: {
     dataRequest() {
-      console.log('Click!')
       store.filmUrl = 'https://api.themoviedb.org/3/search/movie?api_key=2603405e11aa1415589f75dcb722d1e6&language=it-IT&query=' + store.search
 
       store.tvUrl = 'https://api.themoviedb.org/3/search/tv?api_key=2603405e11aa1415589f75dcb722d1e6&language=it-IT&query=' + store.search
@@ -40,9 +39,6 @@ export default {
 <template>
   <AppHeader @search="dataRequest"></AppHeader>
   <AppMain></AppMain>
-  <div>
-
-  </div>
 </template>
 <style lang="scss">
 @use './styles/generals.scss' as *;
