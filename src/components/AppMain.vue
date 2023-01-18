@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="container-fluid main_container">
+    <div class="container-fluid main_container pe-0">
         <AppFilm></AppFilm>
         <AppTv></AppTv>
     </div>

@@ -33,7 +33,7 @@ export default {
             <h1 v-else>Serier TV di tendenza</h1>
         </div>
     </div>
-    <div class="overflow-auto mx-3 film_container">
+    <div class="overflow-auto ms-3 film_container">
         <div v-for="(item, index) in store.tv.results" class="col p-0 me-2">
             <CardTv :tv="item"></CardTv>
         </div>

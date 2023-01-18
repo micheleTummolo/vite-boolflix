@@ -34,7 +34,7 @@ export default {
             <h1 v-else>Film di tendenza</h1>
         </div>
     </div>
-    <div class="overflow-auto mx-3 film_container">
+    <div class="overflow-auto ms-3 film_container">
         <div v-for="(item, index) in store.films.results" class="col p-0 me-2 mb-2">
             <CardFilm :film="item" :i="index"></CardFilm>
         </div>

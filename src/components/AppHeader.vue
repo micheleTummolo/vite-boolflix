@@ -18,7 +18,7 @@ export default {
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-4">
                 <!-- Logo -->
-                <a class="navbar-brand boolflix_color" href="#">BOOLFLIX</a>
+                <a class="navbar-brand boolflix_color boolflix_size" href="#">BOOLFLIX</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -69,8 +69,10 @@ header {
 
         .boolflix_color {
             color: rgb(228, 19, 26);
+        }
 
-
+        .boolflix_size {
+            font-size: 1.5rem;
         }
 
         button:hover .search_icon {
