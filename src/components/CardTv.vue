@@ -14,7 +14,7 @@ export default {
 </script>
 <template lang="">
     <div class="my_card">
-        <img :src="store.imgUrl + tv.poster_path" alt="Image">
+        <img :src="store.imgUrl + tv.poster_path">
         <div class="card_info p-2">
             <h4>Titolo:  {{tv.name}}</h4>
             <h4>Titolo Originale:  {{tv.original_name}}</h4>
@@ -22,7 +22,7 @@ export default {
                 <span v-if="tv.original_language == 'en'" class="fi fi-gb fis"></span>
                 <span v-else :class="`fi fi-` + tv.original_language + ` fis`"></span></h4>
             <h4>Voto: {{tv.vote_average}} /5</h4>
-            <p>{{tv.overview}}</p>
+            <p class="m-0">{{tv.overview}}</p>
 
         </div>
     </div>
@@ -37,7 +37,8 @@ export default {
     }
 
     img {
-        height: 513px;
+        height: 100%;
+        width: 100%;
     }
 
     .card_info {
@@ -51,9 +52,10 @@ export default {
         flex-direction: column;
         justify-content: end;
         overflow: hidden;
+        white-space: normal;
 
-        h5 {
-            font-size: 1rem;
+        p {
+            overflow-y: auto;
         }
     }
 }

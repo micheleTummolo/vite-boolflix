@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="container-fluid main_container pe-0">
+    <div class="container-fluid main_container">
         <AppFilm></AppFilm>
         <AppTv></AppTv>
     </div>
@@ -22,7 +22,7 @@ export default {
     background-color: $bg-primary;
     height: 100vh;
     width: 100vw;
-    overflow: scroll;
-    padding-top: 4rem;
+    overflow-y: scroll;
+    padding: 4rem 0 1rem;
 }
 </style>
